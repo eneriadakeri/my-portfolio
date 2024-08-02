@@ -376,3 +376,143 @@ footer {
 .social-icon:hover {
   color: #e8f2ff;
 }
+navbar {
+      padding: 0;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .hero-section {
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      border-radius: 50px;
+      padding: 10px 20px;
+      transition: background-color 0.3s, transform 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    #backToTopBtn {
+      position: fixed;
+      right: 30px;
+      z-index: 99;
+      background-color: #303030;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none; /* Initially hidden */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #545454;
+      transform: scale(1.1);
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .card-text {
+      color: #6c757d;
+    }
+    
+    .bg-light {
+      background-color: #f8f9fa;
+    }
+
+    /* Modal Image Styling */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modal Header Customization */
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Modal Content Customization */
+.modal-content {
+  border-radius: 15px;
+}
+

@@ -42,38 +42,57 @@
     </div>
   </header>
   
-
   <!-- Content for Home -->
-  <section id="home" class="content-section text-center py-5 bg-light">
+  <section id="home" class="hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
-      <p class="lead">Explore my work, skills, and background.</p>
+      <div class="row hero-content">
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="hero-text">
+            <h1 class="display-4">Welcome to My Portfolio</h1>
+            <p class="lead">I'm a Web Developer. Explore my work, skills, and background.</p>
+            <a href="#about" class="btn btn-custom">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="image.jpg" class="profile-img" alt="Your Name">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Content for About -->
-  <section id="about" class="content-section py-5">
-    <div class="container">
-      <h2 class="text-primary">About Me</h2>
-   <p> I'm Eneriada Keri and I'm embarking on an exciting journey to become a skilled web developer. With a passion for coding and a love for adventures, I'm diving headfirst into the world of web development. Eager to explore new technologies, conquer coding challenges, and create impactful digital experiences, I'm dedicated to honing my skills in HTML, CSS, JavaScript, and beyond. Let's connect and collaborate to build the future of the web together!</p>
-      <div class="education mt-4">
-        <h3>Education & Training</h3>
-        <ul>
-          <li>
-            <h4>University of The Aegean</h4>
-            <p>Bachelor of Science in Computer Science (2020 - Present)</p>
-          </li>
-          <li>
-            <h4>Γενικό Λύκειο Γόννων</h4>
-            <p>Απολύτηριο (2014 - 2018)</p>
-          </li>
-        </ul>
-        <!-- Resume Button -->
-        <a href="resume.pdf" class="btn custom-btn mt-4" download>Download Resume</a>
-    </div>
+ <!-- Content for About -->
+<section id="about" class="content-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- About Me Section -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="text-primary mb-4">About Me</h2>
+        <p class="lead mb-4">
+          I'm Eneriada Keri and I'm embarking on an exciting journey to become a skilled web developer. With a passion for coding and a love for adventures, I'm diving headfirst into the world of web development. Eager to explore new technologies, conquer coding challenges, and create impactful digital experiences, I'm dedicated to honing my skills in HTML, CSS, JavaScript, and beyond. Let's connect and collaborate to build the future of the web together!
+        </p>
+        <a href="resume.pdf" class="btn btn-primary btn-lg" download>Download Resume</a>
+      </div>
+      <!-- Education & Training Section -->
+      <div class="col-lg-6">
+        <h3 class="text-primary mb-3">Education & Training</h3>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="card-title">University of The Aegean</h4>
+            <p class="card-text">Bachelor of Science in Computer Science (2020 - Present)</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Γενικό Λύκειο Γόννων</h4>
+            <p class="card-text">Απολύτηριο (2014 - 2018)</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Content for Projects -->
   <section id="projects" class="content-section py-5 bg-light">
@@ -164,23 +183,30 @@
     </div>
   </section>
 
-  <!-- Back to Top Button -->
-  <button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="btn btn-dark position-fixed bottom-0 end-0 mb-3 me-3">Top</button>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="script.js"></script>
-
+ 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-3">
-    <div class="container text-center">
-      <p>&copy; 2024 ENERIADA KERI. All rights reserved.</p>
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 Your Name. All rights reserved.</p>
       <div class="social-media">
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook-square"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
       </div>
     </div>
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Back to Top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
   </footer>
+  
+
+   <!-- Bootstrap JS Bundle -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Custom JS -->
+   <script src="script.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>

@@ -26,26 +26,20 @@ function showContent(sectionId) {
   });
 }
 
-    // Back to Top Button Functionality
-    var backToTopBtn = document.getElementById("backToTopBtn");
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-        scrollFunction();
-    };
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) { // Show the button after scrolling down 300px
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-    
+    // Scroll back to the top when button is clicked
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
