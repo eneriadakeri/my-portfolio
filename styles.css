@@ -26,6 +26,26 @@ header {
   display: none;
 }
 
+/* Custom styles for active menu item */
+.navbar-nav .nav-link {
+  color: #fff; /* Default color for nav links */
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ccc; /* Color on hover */
+}
+
+.navbar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Background color for active item */
+  border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,.5)" stroke-width="2" d="M4 6h22M4 15h22M4 24h22"/%3E%3C/svg%3E');
+}
+
+
 /* New Navbar Styles */
 .topnav {
   overflow: hidden;
