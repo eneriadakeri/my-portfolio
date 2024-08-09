@@ -7,72 +7,21 @@ body {
 }
 
 /* Header Styles */
-header {
+ header { 
   background-color: #FBFFF4;
   color: #1a1a1a;
-  padding: 30px 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} 
 
 .logo {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.navbar-toggle {
-  display: none;
-}
 
-/* Custom styles for active menu item */
-.navbar-nav .nav-link {
-  color: #fff; /* Default color for nav links */
-  padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ccc; /* Color on hover */
-}
-
-.navbar-nav .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2); /* Background color for active item */
-  border-radius: 5px;
-}
-
-.navbar-toggler-icon {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,.5)" stroke-width="2" d="M4 6h22M4 15h22M4 24h22"/%3E%3C/svg%3E');
-}
-
-/* New Navbar Styles */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
 
 /* Hide logo on small screens */
 .logo {
@@ -89,10 +38,6 @@ header {
 .content-section#about p {
   text-align: justify;
   font-size: 20px;
-}
-
-.content-section#about h2 {
-  color: #589b8c;
 }
 
 .content-section#about h3 {
@@ -401,9 +346,7 @@ footer {
   font-weight: bold;
 }
 
-.nav-link {
-  color: white !important;
-}
+
 
 .hero-section {
   background: #f8f9fa;
@@ -535,3 +478,29 @@ footer {
   border-radius: 15px;
 }
 
+@media (max-width: 576px) {
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .btn-lg {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Custom styles */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 3rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .btn-lg {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+  }
+}

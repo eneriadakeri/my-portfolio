@@ -1,12 +1,16 @@
+// Function for Custom Navbar Toggling
 function myFunction() {
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
+  if (x) {
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
   }
 }
 
+// Function for Showing Content Based on Section ID
 function showContent(sectionId) {
   var sections = document.querySelectorAll('.content-section');
   var navLinks = document.querySelectorAll('.topnav a');
@@ -26,34 +30,26 @@ function showContent(sectionId) {
   });
 }
 
+// Show or Hide Back to Top Button
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.getElementById('backToTopBtn');
-
-    // Show or hide the button based on scroll position
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) { // Show the button after scrolling down 300px
-        backToTopBtn.style.display = 'block';
-      } else {
-        backToTopBtn.style.display = 'none';
-      }
-    });
-
-    // Scroll back to the top when button is clicked
-    backToTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        // Remove active class from all links
-        navLinks.forEach(link => link.classList.remove('active'));
-        // Add active class to the clicked link
-        this.classList.add('active');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', function() {
+        backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
       });
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+});
+
+// Set Active Class for Navbar Links
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
     });
   });
-  
+});
