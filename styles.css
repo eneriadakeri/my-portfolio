@@ -484,3 +484,11 @@ footer {
 .text-primary {
   color: #007bff;
 }
+
+
+.bg-web-development {
+  background-color: #f0f8ff; /* Light blue for web development */
+}
+.bg-web-design {
+  background-color: #fff0f5; /* Light pink for web design */
+}
