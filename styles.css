@@ -257,6 +257,7 @@ footer {
   text-align: center;
   padding: 20px 0;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .footer-content {
@@ -493,87 +494,115 @@ footer {
   background-color: #fff0f5; /* Light pink for web design */
 }
 
-/* Lightbox/Modal Style */
-.lightbox {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  padding-top: 100px; 
-  left: 0;
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+}
+
+.portfolio-hover {
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9); 
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners for hover */
+}
+
+.portfolio-hover-content {
+  color: #fff;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .portfolio-hover {
+  opacity: 1;
+}
+
+.portfolio-caption {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px; /* Padding to ensure text isn't too close to edges */
+}
+
+.portfolio-caption h4 {
+  margin-bottom: 10px;
+  font-size: 1.25em; /* Slightly larger heading */
+}
+
+.portfolio-caption p {
+  color: #6c757d;
+  font-size: 0.9em; /* Slightly smaller font for description */
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Ensure no scrollbars */
 }
 
 .lightbox-content {
-  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px; /* Rounded corners for lightbox image */
+  object-fit: contain; /* Maintain aspect ratio */
   display: block;
-  width: 80%;
-  max-width: 700px;
+  margin: auto; /* Center the image */
 }
 
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-}
-
-.lightbox-content, #caption {    
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* Close Button */
-.close {
+.lightbox .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* Navigation Arrows */
-.prev, .next {
-  cursor: pointer;
+.lightbox .prev,
+.lightbox .next {
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  transform: translateY(-50%);
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.lightbox .prev {
+  left: 20px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.lightbox .next {
+  right: 20px;
 }
-
