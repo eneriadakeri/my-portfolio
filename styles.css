@@ -301,63 +301,66 @@ footer {
 
 
 
+/* Hero section*/
 .hero-section {
-  background: #f8f9fa;
-  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.6), rgba(0, 210, 211, 0.6));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
 }
 
-/* .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-.hero-section .hero-content {
-  align-items: center;
-  justify-content: flex-start; /* Align items to the start (left) */
-  text-align: left; /* Align text to the left */
+.hero-background img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.hero-text {
-  max-width: 500px;
-  padding: 20px;
+.hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
 }
 
-.hero-text h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-}
-
 .profile-img {
-  width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  width: 200px;
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  border: 6px solid #fff;
+  transform: translate(10%, 10%);
 }
 
-
-
-.btn-custom {
+.btn-primary {
   background-color: #007bff;
-  color: white;
-  border-radius: 50px;
-  padding: 10px 20px;
-  transition: background-color 0.3s, transform 0.3s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border-color: #007bff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.btn-custom:hover {
+.btn-primary:hover {
   background-color: #0056b3;
-  transform: scale(1.05);
+  border-color: #004085;
 }
+
+.display-3 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .section {
   padding: 60px 0;
@@ -417,46 +420,71 @@ footer {
 /* Custom styles for project cards */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid #007bff; 
-  border-radius: 0.5rem;
+  border: none;
+  border-radius: 1rem; 
   overflow: hidden;
+  background-color: #1c1c1c; 
 }
 
 .card-img-top {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-bottom: 4px solid #007bff; 
+  border-radius: 1rem 1rem 0 0; 
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px) scale(1.02); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
 }
 
 .card:hover .card-img-top {
-  opacity: 0.85;
+  opacity: 0.9;
+  transform: scale(1.05); 
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.25rem; 
+  background-color: #282828; 
 }
 
 .card-title {
-  color: #007bff; 
+  color: #00b4d8;
+  font-weight: 600; 
 }
 
 .card-title a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .card-title a:hover {
-  text-decoration: underline;
-  color: #0056b3; 
+  text-decoration: none; 
+  color: #0096c7; 
 }
 
 .card-text {
   margin-bottom: 1rem;
-  color: #333; 
+  color: #b0b0b0; 
+  font-size: 0.95rem; 
+  line-height: 1.5; 
 }
+
+/* Footer styles */
+.card-footer {
+  background-color: #007bff; 
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem; 
+  font-size: 0.85rem; 
+}
+
+.card-footer small {
+  font-weight: 500; 
+}
+
 
 /* Add specific background colors for each project card */
 .bg-project1 {
@@ -488,18 +516,17 @@ footer {
 
 
 .bg-web-development {
-  background-color: #f0f8ff; /* Light blue for web development */
+  background-color: #f0f8ff; 
 }
 .bg-web-design {
-  background-color: #fff0f5; /* Light pink for web design */
+  background-color: #fff0f5; 
 }
-
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
 .portfolio-image {
@@ -510,7 +537,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+  border-radius: 8px 8px 0 0; 
+  transition: transform 0.3s ease; 
 }
 
 .portfolio-hover {
@@ -525,7 +553,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px; /* Rounded corners for hover */
+  border-radius: 8px; 
 }
 
 .portfolio-hover-content {
@@ -533,7 +561,7 @@ footer {
 }
 
 .portfolio-item:hover .portfolio-image {
-  transform: scale(1.1);
+  transform: scale(1.05); 
 }
 
 .portfolio-item:hover .portfolio-hover {
@@ -543,19 +571,36 @@ footer {
 .portfolio-caption {
   text-align: center;
   margin-top: 15px;
-  padding: 10px; /* Padding to ensure text isn't too close to edges */
+  padding: 10px; 
 }
 
 .portfolio-caption h4 {
   margin-bottom: 10px;
-  font-size: 1.25em; /* Slightly larger heading */
+  font-size: 1.25em; 
 }
 
 .portfolio-caption p {
   color: #6c757d;
-  font-size: 0.9em; /* Slightly smaller font for description */
+  font-size: 0.9em; 
 }
 
+.custom-spacing {
+  margin-bottom: 30px; 
+}
+
+@media (max-width: 576px) {
+  .portfolio-image {
+    height: 150px; 
+  }
+
+  .portfolio-caption h4 {
+    font-size: 1.1em;
+  }
+
+  .portfolio-caption p {
+    font-size: 0.8em; 
+  }
+}
 .lightbox {
   display: none;
   position: fixed;
