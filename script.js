@@ -73,3 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
     showImage(currentImageIndex);
   };
 });
+
+
+function openImage(src) {
+  const lightboxImage = document.getElementById("lightbox-image");
+  lightboxImage.src = src;
+
+  const lightbox = document.getElementById("image-lightbox");
+  lightbox.style.display = "flex"; // Use flex for centering
+}
+
+function closeImage() {
+  const lightbox = document.getElementById("image-lightbox");
+  lightbox.style.display = "none";
+}
+
+function changeImage(direction) {
+  // Your image changing logic here
+}

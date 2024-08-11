@@ -303,49 +303,53 @@ footer {
 
 /* Hero section*/
 .hero-section {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.6), rgba(0, 210, 211, 0.6));
-  color: #fff;
   position: relative;
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
-  padding: 5rem 0;
+  color: #fff;
 }
 
-.hero-background img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   z-index: 1;
+}
+
+.hero-background img {
+  object-fit: cover; /* Ensure the image covers the section */
+  width: 100%;
+  height: 100%;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-}
-
-.profile-img {
-  width: 200px;
-  position: absolute;
-  bottom: -10%;
-  right: -10%;
-  border: 6px solid #fff;
-  transform: translate(10%, 10%);
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+  border: 2px solid transparent; /* Border is transparent by default */
+  color: #fff; /* White text color */
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px; /* Rounded corners */
+  padding: 0.75rem 1.5rem; /* Padding for button size */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  letter-spacing: 1px; /* Spacing between letters */
+  display: inline-block; /* Ensure it's inline */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #004085;
+  background: linear-gradient(135deg, #0056b3, #004085); /* Darker gradient on hover */
+  border-color: #003d7a; /* Subtle border color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
-
 .display-3 {
   font-size: 3.5rem;
   line-height: 1.2;
@@ -355,11 +359,6 @@ footer {
 .lead {
   font-size: 1.25rem;
 }
-
-.shadow-lg {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 
 
 .section {
@@ -521,133 +520,222 @@ footer {
 .bg-web-design {
   background-color: #fff0f5; 
 }
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  text-align: center; 
+.projects-section {
+  background-color: #ffffff;
+  padding: 60px 0;
 }
 
-.portfolio-image {
-  width: 100%;
-  height: 200px; /* Fixed height for images */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subheading {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-item {
+  position: relative;
+  width: calc(33.333% - 20px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  height: 200px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px 8px 0 0; 
-  transition: transform 0.3s ease; 
 }
 
-.portfolio-hover {
+.project-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px; 
-}
-
-.portfolio-hover-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
   color: #fff;
+  padding: 20px;
 }
 
-.portfolio-item:hover .portfolio-image {
-  transform: scale(1.05); 
-}
-
-.portfolio-item:hover .portfolio-hover {
+.project-item:hover .project-overlay {
   opacity: 1;
 }
 
-.portfolio-caption {
-  text-align: center;
-  margin-top: 15px;
-  padding: 10px; 
+.project-info {
+  max-width: 80%;
 }
 
-.portfolio-caption h4 {
+.project-info h4 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  font-size: 1.25em; 
 }
 
-.portfolio-caption p {
-  color: #6c757d;
-  font-size: 0.9em; 
+.project-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-.custom-spacing {
-  margin-bottom: 30px; 
+.btn-light {
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (max-width: 576px) {
-  .portfolio-image {
-    height: 150px; 
+.btn-light:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .project-item {
+    width: calc(50% - 20px);
   }
+}
 
-  .portfolio-caption h4 {
-    font-size: 1.1em;
-  }
-
-  .portfolio-caption p {
-    font-size: 0.8em; 
+@media (max-width: 767.98px) {
+  .project-item {
+    width: 100%;
   }
 }
+
+/* Lightbox container */
 .lightbox {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
-  top: 0;
+  z-index: 1000;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  overflow: hidden; /* Ensure no scrollbars */
+  padding: 10px; /* Padding to ensure spacing around the image */
 }
 
+/* Lightbox content (image) */
 .lightbox-content {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px; /* Rounded corners for lightbox image */
-  object-fit: contain; /* Maintain aspect ratio */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
   display: block;
-  margin: auto; /* Center the image */
+  object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.lightbox .close {
+/* Close button */
+.close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2em;
-  color: #fff;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 1001;
 }
 
-.lightbox .prev,
-.lightbox .next {
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  font-size: 2em;
-  color: #fff;
-  cursor: pointer;
-  padding: 0 10px;
   transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 1001;
 }
 
-.lightbox .prev {
-  left: 20px;
+.prev {
+  left: 10px;
 }
 
-.lightbox .next {
-  right: 20px;
+.next {
+  right: 10px;
 }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .close {
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .prev, .next {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .lightbox-content {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox-content {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .prev, .next {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .close {
+    font-size: 25px;
+  }
+}
+
