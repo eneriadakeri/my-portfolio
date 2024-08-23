@@ -91,3 +91,22 @@ function closeImage() {
 function changeImage(direction) {
   // Your image changing logic here
 }
+
+let currentIndex = 0;
+let images = [];
+
+function openModal(initialImage, imageArray) {
+  images = imageArray;
+  currentIndex = imageArray.indexOf(initialImage);
+  document.getElementById('modal-image').src = images[currentIndex];
+  document.getElementById('image-modal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('image-modal').style.display = 'none';
+}
+
+function changeImage(step) {
+  currentIndex = (currentIndex + step + images.length) % images.length;
+  document.getElementById('modal-image').src = images[currentIndex];
+}
