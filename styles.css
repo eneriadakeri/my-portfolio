@@ -416,6 +416,26 @@ footer {
   border-radius: 15px;
 }
 
+/* General Styles for the Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+
 /* Custom styles for project cards */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -625,6 +645,7 @@ footer {
     width: 100%;
   }
 }
+
 
 /* Lightbox container */
 .lightbox {
