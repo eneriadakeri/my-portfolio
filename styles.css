@@ -457,34 +457,6 @@ footer {
   }
 }
 
-/* Modern Button Styling */
-.btn-modern {
-  background-color: #ffffff; /* Button background color */
-  color: #333; /* Button text color */
-  border: 2px solid #333; /* Border with the same color as text */
-  padding: 10px 20px; /* Padding for the button */
-  font-size: 1rem; /* Font size */
-  font-weight: 600; /* Font weight for a slightly bolder look */
-  text-transform: uppercase; /* Uppercase text */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-  text-decoration: none; /* Remove underline from links */
-  display: inline-block; /* Allows padding and margin to work */
-}
-
-.btn-modern:hover,
-.btn-modern:focus {
-  background-color: #333; /* Dark background on hover */
-  color: #ffffff; /* White text on hover */
-  border-color: #333; /* Border color remains the same */
-}
-
-.btn-modern:active {
-  background-color: #555; /* Slightly darker background when active */
-  color: #ffffff; /* White text */
-}
-
-
 .section {
   padding: 60px 0;
 }
@@ -882,5 +854,32 @@ footer {
   .close {
     font-size: 25px;
   }
+}
+
+/* Modern Button Styling */
+.btn-modern {
+  background-color: #ffffff; /* Button background color */
+  color: #333; /* Button text color */
+  border: 2px solid #333; /* Border with the same color as text */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Font weight for a slightly bolder look */
+  text-transform: uppercase; /* Uppercase text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Allows padding and margin to work */
+}
+
+.btn-modern:hover,
+.btn-modern:focus {
+  background-color: #333; /* Dark background on hover */
+  color: #ffffff; /* White text on hover */
+  border-color: #333; /* Border color remains the same */
+}
+
+.btn-modern:active {
+  background-color: #555; /* Slightly darker background when active */
+  color: #ffffff; /* White text */
 }
 
