@@ -51,20 +51,34 @@
 
 
 <!-- Content for Home -->
-<section id="home" class="hero-section text-light d-flex align-items-center justify-content-center text-center position-relative">
-  <div class="hero-background">
-    <img src="images/image.jpg" class="img-fluid" alt="Background">
-  </div>
-  <div class="hero-content container position-relative z-index-2">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h1 class="display-3 fw-bold mb-4">Welcome to My Portfolio</h1>
-        <p class="lead mb-4">I'm a Junior Web Developer. Explore my work, skills, and background.</p>
-        <a href="#about" class="btn btn-primary btn-lg shadow-lg">Learn More</a>
+<section id="home" class="hero-section d-flex align-items-center justify-content-center text-center position-relative">
+  <div class="hero-content container d-flex flex-column flex-md-row align-items-center text-light position-relative z-index-2">
+    <div class="text-content mb-4 mb-md-0 pe-md-5 d-flex flex-column align-items-center text-center">
+      <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeIn">Welcome to My Portfolio</h1>
+      <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">I’m Eneriada Keri, a creative Web Developer with a passion for crafting unique online experiences.</p>
+      <!-- Icons for HTML, CSS, and JavaScript -->
+      <div class="tech-icons d-flex flex-wrap justify-content-center mt-4">
+        <div class="icon mx-3 text-center">
+          <i class="fab fa-html5 fa-3x text-danger"></i>
+          <p class="mt-2 mb-0">HTML</p>
+        </div>
+        <div class="icon mx-3 text-center">
+          <i class="fab fa-css3-alt fa-3x text-primary"></i>
+          <p class="mt-2 mb-0">CSS</p>
+        </div>
+        <div class="icon mx-3 text-center">
+          <i class="fab fa-js fa-3x text-warning"></i>
+          <p class="mt-2 mb-0">JavaScript</p>
+        </div>
       </div>
+      <a href="#about" class="btn btn-modern animate__animated animate__fadeIn animate__delay-2s mt-4">LEARN MORE</a>
+    </div>
+    <div class="image-content mt-4 mt-md-0 text-center text-md-start">
+      <img src="images/me.jpeg" class="img-fluid rounded-circle shadow-lg circle-img" alt="My Portrait">
     </div>
   </div>
 </section>
+
 
     <!-- About Me Section -->
     <section id="about" class="content-section py-5">
@@ -400,24 +414,24 @@
     <div class="project-grid">
       <!-- Project 1 -->
       <div class="project-item">
-        <div class="project-image" style="background-image: url('images/HOME.png');"></div>
+        <div class="project-image" style="background-image: url('images/HOME.jpg');"></div>
         <div class="project-overlay">
           <div class="project-info">
             <h4>Website Design</h4>
             <p>View the Armin Hoffman's Website design</p>
-            <a href="#" onclick="showGallery(['images/HOME.png', 'images/INFO.png', 'images/WORK.png']); return false;" class="btn btn-light">View Gallery</a>
+            <a href="#" onclick="showGallery(['images/HOME.jpg', 'images/INFO.png', 'images/WORK.png']); return false;" class="btn btn-light">View Gallery</a>
           </div>
         </div>
       </div>
 
       <!-- Project 2 -->
       <div class="project-item">
-        <div class="project-image" style="background-image: url('logos/logo.jpg');"></div>
+        <div class="project-image" style="background-image: url('logos/logos.jpg');"></div>
         <div class="project-overlay">
           <div class="project-info">
             <h4>Logo Design</h4>
             <p>View the Logo Design of AegeanDocs</p>
-            <a href="#" onclick="showGallery(['logos/logo.jpg','logos/TELIKO_LOGO.jpg']); return false;" class="btn btn-light">View Gallery</a>
+            <a href="#" onclick="showGallery(['logos/logos.jpg','logos/TELIKO_LOGO.jpg']); return false;" class="btn btn-light">View Gallery</a>
           </div>
         </div>
       </div>

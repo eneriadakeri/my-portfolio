@@ -53,7 +53,7 @@ body {
   }
   .timeline-icon {
     position: absolute;
-    left: 10px;
+    left: 6px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -354,67 +354,135 @@ footer {
   font-weight: bold;
 }
 
-
-
-/* Hero section*/
+/* Hero Section */
 .hero-section {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  background: #191919;
   overflow: hidden;
   color: #fff;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hero-background img {
-  object-fit: cover; /* Ensure the image covers the section */
-  width: 100%;
-  height: 100%;
+  text-align: center;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
-  border: 2px solid transparent; /* Border is transparent by default */
-  color: #fff; /* White text color */
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 50px; /* Rounded corners */
-  padding: 0.75rem 1.5rem; /* Padding for button size */
-  transition: all 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  letter-spacing: 1px; /* Spacing between letters */
-  display: inline-block; /* Ensure it's inline */
+.text-content {
+  max-width: 50%;
+  text-align: left; /* Align text to the left */
+  margin-right: 2rem; /* Space between text and image */
 }
 
-.btn-primary:hover {
-  background: linear-gradient(135deg, #0056b3, #004085); /* Darker gradient on hover */
-  border-color: #003d7a; /* Subtle border color on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-}
-.display-3 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  font-weight: 700;
+.display-4 {
+  font-size: 3rem; /* Larger headline for impact */
 }
 
 .lead {
   font-size: 1.25rem;
 }
 
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap for better spacing */
+  margin: 1.5rem 0;
+}
+
+.logo {
+  color: #fff; /* Ensure logos are white for better contrast */
+}
+
+
+.hero-background {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-left: 2rem; /* Space between image and text */
+}
+
+.circle-img {
+  width: 500px; /* Adjusted size */
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.circle-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-background {
+    margin-left: 0;
+  }
+
+  .circle-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Modern Button Styling */
+.btn-modern {
+  background-color: #ffffff; /* Button background color */
+  color: #333; /* Button text color */
+  border: 2px solid #333; /* Border with the same color as text */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Font weight for a slightly bolder look */
+  text-transform: uppercase; /* Uppercase text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Allows padding and margin to work */
+}
+
+.btn-modern:hover,
+.btn-modern:focus {
+  background-color: #333; /* Dark background on hover */
+  color: #ffffff; /* White text on hover */
+  border-color: #333; /* Border color remains the same */
+}
+
+.btn-modern:active {
+  background-color: #555; /* Slightly darker background when active */
+  color: #ffffff; /* White text */
+}
 
 .section {
   padding: 60px 0;
@@ -815,46 +883,3 @@ footer {
   }
 }
 
-/* Modal Styles */
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.modal-nav {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.prev, .next {
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-}
