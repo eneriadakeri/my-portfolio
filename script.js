@@ -110,3 +110,29 @@ function changeImage(step) {
   currentIndex = (currentIndex + step + images.length) % images.length;
   document.getElementById('modal-image').src = images[currentIndex];
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('modal1');
+  const openModal = document.querySelector('.image-link');
+  const closeModal = document.getElementById('closeModal');
+
+  // Show the modal
+  openModal.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    modal.classList.add('show'); // Add 'show' class to display the modal
+  });
+
+  // Hide the modal
+  closeModal.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    modal.classList.remove('show'); // Remove 'show' class to hide the modal
+  });
+
+  // Hide the modal when clicking outside of the modal content
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+});
