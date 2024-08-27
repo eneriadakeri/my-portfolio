@@ -136,3 +136,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+function openGallery(images) {
+  // Add the class to prevent body scroll
+  document.body.classList.add('no-scroll');
+
+  // Initialize the Swiper or your gallery logic here
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
+  swiperWrapper.innerHTML = images.map(img => `<div class="swiper-slide"><img src="${img}" alt="Gallery image"></div>`).join('');
+
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+  });
+
+  // Show the lightbox
+  document.getElementById('image-lightbox').style.display = 'flex';
+}
+
+function closeGallery() {
+  // Remove the class to allow body scroll
+  document.body.classList.remove('no-scroll');
+
+  // Hide the lightbox
+  document.getElementById('image-lightbox').style.display = 'none';
+}
