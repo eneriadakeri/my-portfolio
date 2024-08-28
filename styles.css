@@ -832,8 +832,8 @@ footer {
 
   #image-lightbox .close {
     font-size: 30px;
-    top: 15px; /* Move closer to the top edge */
-    right: 15px; /* Move closer to the right edge */
+    top: 15px; 
+    right: 15px; 
   }
 
   .swiper-container {
@@ -857,8 +857,8 @@ footer {
 
   #image-lightbox .close {
     font-size: 25px;
-    top: 10px; /* Further move closer to the top edge */
-    right: 10px; /* Further move closer to the right edge */
+    top: 10px; 
+    right: 10px; 
   }
 
   .swiper-container {
@@ -870,16 +870,16 @@ footer {
 /* Modern Button Styling */
 .btn-modern {
   background-color: #ffffff; /* Button background color */
-  color: #333; /* Button text color */
-  border: 2px solid #333; /* Border with the same color as text */
-  padding: 10px 20px; /* Padding for the button */
-  font-size: 1rem; /* Font size */
-  font-weight: 600; /* Font weight for a slightly bolder look */
-  text-transform: uppercase; /* Uppercase text */
-  border-radius: 5px; /* Rounded corners */
+  color: #333; 
+  border: 2px solid #333; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  border-radius: 5px; 
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-  text-decoration: none; /* Remove underline from links */
-  display: inline-block; /* Allows padding and margin to work */
+  text-decoration: none; 
+  display: inline-block; 
 }
 
 .btn-modern:hover,
@@ -914,15 +914,15 @@ footer {
 }
 
 .btn-close {
-  position: absolute;
+  /* position: absolute; */
   top: 18px;
   right: 18px;
-  z-index: 1050; /* Ensure it appears above other content */
-  width: 1rem; /* Larger size for better accessibility */
-  height: 1rem; /* Larger size for better accessibility */
-  font-size: 1rem; /* Larger font size */
-  line-height: 1; /* Align with button */
-  border-radius: 50%; /* Circular button */
+  z-index: 1050; 
+  width: 1rem; 
+  height: 1rem; 
+  font-size: 1rem; 
+  line-height: 1; 
+  border-radius: 50%; 
 }
 
 /* Responsive adjustments */
@@ -934,9 +934,9 @@ footer {
   .btn-close {
     top: 8px;
     right: 8px;
-    width: 0.5rem; /* Larger for better accessibility on small devices */
-    height: 0.5rem; /* Larger for better accessibility on small devices */
-    font-size: 0.5rem; /* Larger font size for better visibility on small devices */
+    width: 1rem; 
+    height: 1rem; 
+    font-size: 1rem; 
   }
 }
 
@@ -946,9 +946,9 @@ footer {
     margin: 1.5rem auto;
   }
   .btn-close {
-    width: 1rem; /* Adjust size for small devices */
-    height: 1rem; /* Adjust size for small devices */
-    font-size: 1rem; /* Adjust font size for small devices */
+    width: 1rem; 
+    height: 1rem; 
+    font-size: 1rem; 
   }
 }
 
