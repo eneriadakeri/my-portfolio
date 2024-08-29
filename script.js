@@ -112,43 +112,60 @@ function changeImage(step) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('modal1');
-  const openModal = document.querySelector('.image-link');
-  const closeModal = document.getElementById('closeModal');
+// document.addEventListener('DOMContentLoaded', function() {
+//   const modal = document.getElementById('modal1');
+//   const openModal = document.querySelector('.image-link');
+//   const closeModal = document.getElementById('closeModal');
 
-  // Show the modal
-  openModal.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    modal.classList.add('show'); // Add 'show' class to display the modal
-  });
+//   // Show the modal
+//   openModal.addEventListener('click', function(event) {
+//     event.preventDefault(); // Prevent default link behavior
+//     modal.classList.add('show'); // Add 'show' class to display the modal
+//   });
 
-  // Hide the modal
-  closeModal.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    modal.classList.remove('show'); // Remove 'show' class to hide the modal
-  });
+//   // Hide the modal
+//   closeModal.addEventListener('click', function(event) {
+//     event.preventDefault(); 
+//     modal.classList.remove('show'); 
+//   });
 
-  // Hide the modal when clicking outside of the modal content
-  window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-      modal.classList.remove('show');
-    }
-  });
-});
+//   // Hide the modal when clicking outside of the modal content
+//   window.addEventListener('click', function(event) {
+//     if (event.target === modal) {
+//       modal.classList.remove('show');
+//     }
+//   });
+// });
 
 function openGallery(images) {
   // Add the class to prevent body scroll
   document.body.classList.add('no-scroll');
 
-  // Initialize the Swiper or your gallery logic here
+  // Select the Swiper wrapper
   const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+  // Populate Swiper slides dynamically
   swiperWrapper.innerHTML = images.map(img => `<div class="swiper-slide"><img src="${img}" alt="Gallery image"></div>`).join('');
 
+  // Calculate the required number of slides for loop mode
+  const minSlidesForLoop = 2; // minimum slides to enable loop
+
+  // Determine if there are enough images to enable loop mode
+  const shouldLoop = images.length >= minSlidesForLoop;
+
+  // Initialize Swiper
   const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+    loop: shouldLoop,  // Conditionally set loop mode
+    pagination: { 
+      el: '.swiper-pagination', 
+      clickable: true 
+    },
+    navigation: { 
+      nextEl: '.swiper-button-next', 
+      prevEl: '.swiper-button-prev' 
+    },
+    slidesPerView: 1, // Adjust slidesPerView based on your requirement
+    slidesPerGroup: 1 // Adjust slidesPerGroup based on your requirement
   });
 
   // Show the lightbox
