@@ -188,60 +188,70 @@ button[type="submit"]:hover {
   color: #1d1d1d;
   text-align: center;
 }
-
-.skills-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.content-section {
+  background-color: #f8f9fa;
 }
 
-.skill-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #111111;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
+.card {
+  border: none;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skill-item:last-child {
-  margin-bottom: 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-.skill-item:hover {
-  background-color: #292929;
+.card-header {
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 
-.skill-bar {
-  height: 100%;
+.card-header i {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #007bff;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.progress {
+  height: 1.2rem;
   border-radius: 10px;
-  background-color: #191919;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  transition: width 0.3s ease;
+  background-color: #e9ecef;
 }
 
-.skill-item:hover .skill-bar {
-  background-color: #a4a4a4;
+.progress-bar {
+  border-radius: 10px;
+  font-size: 0.9rem;
 }
 
-.skill-label {
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-  text-align: left;
-  padding: 10px;
+.container {
+  max-width: 1200px;
 }
 
-.skill-percentage {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
+@media (max-width: 767.98px) {
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-header i {
+    margin-bottom: 1rem;
+  }
+  
+  .ml-3 {
+    margin-left: 0;
+  }
 }
 
 /* Centered Text Styles */
@@ -646,30 +656,31 @@ footer {
 /* Project Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
+  padding: 20px;
 }
 
 .project-item {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 20px; /* Rounded corners for a more modern look */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Softer, more spread shadow */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 200px;
+  height: 250px;
   transition: opacity 0.3s ease;
 }
 
@@ -679,13 +690,13 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* Slightly lighter overlay */
   opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-  border-radius: 12px;
+  border-radius: 20px; /* Match overlay corners with the item */
 }
 
 .project-item:hover .project-overlay {
@@ -695,46 +706,50 @@ footer {
 .project-info {
   text-align: center;
   color: #fff;
+  padding: 20px; /* Add padding for better spacing */
 }
 
 .project-info h4 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px; /* Slightly increased letter spacing */
 }
 
 .project-info p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 1.4; /* Improve readability */
 }
 
 .btn-light {
-  background-color: #ffffff;
-  color: #333333;
-  border: 2px solid #333333;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
   padding: 12px 24px;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 6px; /* Slightly smaller border radius for a sleeker look */
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-light:hover {
-  background-color: #333333;
-  color: #ffffff;
-  border-color: #333333;
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
 }
 
 /* Swiper Container Styles */
 .swiper-container {
   width: 80%;
   height: 80%;
-  max-width: 1200px; /* Limit the maximum width */
-  max-height: 800px; /* Limit the maximum height */
+  max-width: 1400px;
+  max-height: 900px;
   position: relative;
-  background-color: #000; /* Dark background to highlight images */
-  border-radius: 12px; /* Rounded corners */
+  background-color: #000;
+  border-radius: 20px; /* Match Swiper container corners with project items */
+  overflow: hidden;
 }
 
 /* Swiper Slide Styles */
@@ -742,14 +757,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000; /* Ensure background is dark */
+  background-color: #000;
 }
 
 .swiper-slide img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 12px; /* Rounded corners for images */
+  border-radius: 20px;
 }
+
 /* Lightbox Overlay Styles */
 #image-lightbox {
   position: fixed;
@@ -757,7 +773,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
@@ -770,27 +786,28 @@ footer {
   top: 20px;
   right: 20px;
   color: #fff;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 1100; /* Ensure it's above other elements */
+  z-index: 1100;
 }
+
 /* Navigation Buttons Styles */
 .swiper-button-next, .swiper-button-prev {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
 }
 
@@ -813,42 +830,42 @@ footer {
 
 @media (max-width: 992px) {
   .section-heading {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .section-subheading {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
   .section-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .section-subheading {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   #image-lightbox .close {
-    font-size: 30px;
+    font-size: 35px;
     top: 15px; 
     right: 15px; 
   }
 
   .swiper-container {
     width: 95%;
-    height: 60%;
+    height: 65%;
   }
 }
 
 @media (max-width: 576px) {
   .section-heading {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .section-subheading {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .project-item {
@@ -856,16 +873,18 @@ footer {
   }
 
   #image-lightbox .close {
-    font-size: 25px;
-    top: 177px; 
+    font-size: 30px;
+    top: 160px; 
     right: 10px; 
   }
 
   .swiper-container {
     width: 100%;
-    height: 50%;
+    height: 55%;
   }
 }
+
+
 
 /* Modern Button Styling */
 .btn-modern {
@@ -964,4 +983,7 @@ footer {
     max-width: 70%;
     margin: 2rem auto;
   }
+}
+.btn-close {
+  position: absolute;
 }
