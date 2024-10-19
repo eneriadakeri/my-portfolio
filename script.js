@@ -80,3 +80,18 @@ function closeGallery() {
   // Hide the lightbox
   document.getElementById('image-lightbox').style.display = 'none';
 }
+// JavaScript to handle Bootstrap collapse events for toggling the icons
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById("navbarToggle");
+  const navbarCollapse = document.getElementById("navbarNav");
+
+  // Listen for the collapse show event (when the menu is expanding)
+  navbarCollapse.addEventListener("show.bs.collapse", function() {
+      toggleButton.innerHTML = '<span class="close-icon">&times;</span>'; // Change to close icon
+  });
+
+  // Listen for the collapse hide event (when the menu is collapsing)
+  navbarCollapse.addEventListener("hide.bs.collapse", function() {
+      toggleButton.innerHTML = '<span class="navbar-toggler-icon"></span>'; // Change back to burger icon
+  });
+});

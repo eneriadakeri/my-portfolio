@@ -86,9 +86,7 @@ body {
   text-align: justify;
 }
 
-.content-section#about h2 {
-  color:;
-}
+
 /* Skills Container Styles */
 .skills-container {
   background-color: #000000;
@@ -962,3 +960,8 @@ body.scrolled #backToTopBtn {
 .btn-close {
   position: absolute;
 }
+
+.close-icon {
+            font-size: 35px;
+            color: #fff;
+        }
