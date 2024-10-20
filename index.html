@@ -26,12 +26,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="bg-dark text-light py-3 shadow-sm">
+  <header>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand fs-3 fw-bold" href="#home">KERI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
-                <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark"> 
+            <a class="navbar-brand" href="#home">KERI</a>
+            <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Default burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -63,17 +63,17 @@
   <div class="container">
     <div class="row align-items-center">
       <!-- Text Content -->
-      <div class="col-lg-6 col-12 mb-4 order-1 order-lg-1 text-center text-lg-start"> <!-- Full width on small screens -->
+      <div class="col-lg-6 col-md-12 mb-4 order-2 order-lg-1 text-center text-lg-start"> <!-- Adjust order for medium screens -->
         <div class="p-4 text-dark">
-          <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeIn" style="margin-top:80px;">Welcome to My Portfolio</h1>
+          <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeIn" style="margin-top:80px;">Welcome to My Portfolio</h1>
           <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s" style="max-width: 500px;">
             I’m Eneriada Keri, a junior web developer committed to building clean and user-friendly websites. 
             Explore my projects and see what I can do!            
           </p>
 
           <!-- Call to Action Buttons -->
-          <div class="mt-4">
-            <a href="#projects" class="btn btn-outline-primary btn-lg me-3 animate__animated animate__fadeInUp">MY PROJECTS</a>
+          <div class="mt-4 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start">
+            <a href="#projects" class="btn btn-outline-primary btn-lg mb-2 mb-lg-0 me-lg-3 animate__animated animate__fadeInUp">MY PROJECTS</a>
             <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s">GET IN TOUCH</a>
           </div>
         </div>
@@ -93,7 +93,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- About Section -->
 <section id="about" class="py-5" style="background: #f4f7fa;">
@@ -173,7 +172,7 @@
         </div>
       </div>
     </div>
-    <h2 class="display-4 mb-4 text-center" style="color: #2c3e50;">Internship Experience</h2>
+<h2 class="display-4 mb-4 text-center" style="color: #2c3e50;">Internship Experience</h2>
     <div class="accordion" id="internshipAccordion">
       <div class="accordion-item border-0 rounded shadow-sm">
         <h2 class="accordion-header" id="headingOne">
