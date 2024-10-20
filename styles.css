@@ -6,15 +6,68 @@ body {
   overflow-y: scroll;
 }
 
-/* Header Styles */
- header { 
-  background-color: #FBFFF4;
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} 
+/* Navbar container styling */
+header {
+  background-color: #1b1b1c; /* Dark navy background for the navbar */
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly more pronounced shadow for depth */
+}
+
+/* Navbar brand */
+.navbar-brand {
+  color: #fbc531; /* Bright yellow for the logo */
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+  color: #e0e0e0; /* Light gray for links */
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 0.5rem 1rem; /* Added padding for better touch target */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+/* Hover and active state for links */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #18181c; /* Dark background on hover */
+  background-color: #fbc531; /* Bright yellow background on hover */
+}
+
+/* Toggler button for mobile view */
+.navbar-toggler {
+  border: none;
+}
+
+/* Media query for small screen adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+      background-color: #1b1b1c; /* Consistent background for mobile */
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for mobile menu */
+  }
+
+  .navbar-nav .nav-item {
+      margin-bottom: 15px; /* Spacing between items */
+  }
+
+  .navbar-nav .nav-link {
+      padding: 0.75rem 1rem; /* Maintain padding for touch targets */
+      margin-right: 0; /* Remove margin for better alignment */
+  }
+}
+
 
 .logo {
   font-size: 3rem;
@@ -34,40 +87,47 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
   }
-  .timeline {
+.timeline {
     position: relative;
-    padding: 20px 0;
-    margin-left: 30px;
-  }
-  .timeline-item {
+    margin-top: 20px; /* Adds space above the timeline */
+}
+
+.timeline-item {
     position: relative;
-    margin-bottom: 30px;
-  }
-  .timeline-item::before {
-    content: '';
+    padding-left: 60px; /* Adjust padding to create more space for the icon */
+    margin-bottom: 20px; /* Adds space between items */
+}
+
+.timeline-icon {
     position: absolute;
-    left: 20px;
-    width: 2px;
-    height: 100%;
-    background-color: #e9ecef;
-  }
-  .timeline-icon {
-    position: absolute;
-    left: 6px;
-    width: 30px;
-    height: 30px;
+    left: 10px; /* Adjusted for better alignment with timeline items */
+    top: 0;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    color: #fff;
-  }
-  .timeline-content {
-    margin-left: 50px;
-    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa; /* Light background to match the section */
+}
+
+.timeline-content {
     border-radius: 8px;
-  }
+    border-left: 5px solid #ff5722; /* Use your theme color for the border */
+    background: #ffffff; /* Ensure the background is white for consistency */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.timeline-content:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.timeline-content h4 {
+    margin-bottom: 0.5rem;
+    color: #333; /* Ensure the text color is consistent */
+}
+
   .shadow-sm {
     box-shadow: 0 1px 2px rgba(0,0,0,0.075);
   }
@@ -86,7 +146,49 @@ body {
   text-align: justify;
 }
 
+.btn-custom {
+  background-color: #ff5722; /* Match the primary color */
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #ff5722; /* Border color matches the background */
+  border-radius: 50px; /* More rounded for a modern touch */
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s, border 0.3s;
+  position: relative; /* Positioning for a hover effect */
+  overflow: hidden; /* Hides the pseudo-element on hover */
+  z-index: 1;
+}
 
+.btn-custom:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay effect */
+  transform: scale(0);
+  transition: transform 0.3s;
+  z-index: -1; /* Behind the button */
+}
+
+.btn-custom:hover {
+  background-color: #e0e0e0; /* Lighter on hover */
+  color: #ff5722; /* Change text color on hover */
+  border-color: #e0e0e0; /* Border color change on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn-custom:hover:before {
+  transform: scale(1); /* Show the overlay effect on hover */
+}
+
+.btn-custom:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
 /* Skills Container Styles */
 .skills-container {
   background-color: #000000;
@@ -327,16 +429,6 @@ body.scrolled #backToTopBtn {
     opacity: 1;
   }
 }
-
-.navbar {
-  padding: 0;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -563,7 +655,7 @@ body.scrolled #backToTopBtn {
 
 .card-text {
   margin-bottom: 1rem;
-  color: #b0b0b0; 
+  /* color: #6c4d4d;  */
   font-size: 0.95rem; 
   line-height: 1.5; 
 }

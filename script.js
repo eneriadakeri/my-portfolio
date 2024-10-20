@@ -95,3 +95,4 @@ document.addEventListener("DOMContentLoaded", function() {
       toggleButton.innerHTML = '<span class="navbar-toggler-icon"></span>'; // Change back to burger icon
   });
 });
+
