@@ -59,40 +59,47 @@
 
 
 <!-- Content for Home -->
-<section id="home" class="py-5" style="background: #f8f9fa;"> <!-- Light background -->
+<section id="home" class="py-5 d-flex align-items-center" style="background: #121212; color: #ffffff; min-height: 100vh;"> 
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center justify-content-center">
+      
       <!-- Text Content -->
-      <div class="col-lg-6 col-md-12 mb-4 order-2 order-lg-1 text-center text-lg-start"> <!-- Adjust order for medium screens -->
-        <div class="p-4 text-dark">
-          <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeIn" style="margin-top:80px;">Welcome to My Portfolio</h1>
-          <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s" >
-            I’m Eneriada Keri, a junior web developer committed to building clean and user-friendly websites. 
-            Explore my projects and see what I can do!            
+      <div class="col-lg-6 col-md-10 text-center text-lg-start order-2 order-lg-1">
+        <div class="p-4">
+          <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeIn">
+            Hi, I’m Eneriada Keri
+          </h1>
+          <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">
+          A junior web developer committed to building clean and user-friendly websites. 
+            Explore my projects and see what I can do!     
           </p>
 
           <!-- Call to Action Buttons -->
-          <div class="mt-4 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start">
-            <a href="#projects" class="btn btn-outline-primary btn-lg mb-2 mb-lg-0 me-lg-3 animate__animated animate__fadeInUp">MY PROJECTS</a>
-            <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s">GET IN TOUCH</a>
+          <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start">
+            <a href="#projects" class="btn btn-outline-light btn-lg mb-3 mb-sm-0 me-sm-3 animate__animated animate__fadeInUp rounded-4">MY WORK</a>
+            <a href="#contact" class="btn btn-warning btn-lg animate__animated animate__fadeInUp animate__delay-1s rounded-4">LET’S TALK</a>
           </div>
         </div>
       </div>
 
-      <!-- Image Section with Geometric Design -->
-      <div class="col-lg-6 col-12 text-center mb-4 order-2 order-lg-2"> <!-- Full width on small screens -->
+      <!-- Image Section with Animated Elements -->
+      <div class="col-lg-6 col-md-10 col-12 text-center order-1 order-lg-2">
         <div class="image-content position-relative">
-          <img src="images/me.jpeg" class="img-fluid rounded-circle shadow-lg circle-img" alt="My Portrait" style="margin-top: 80px;"> <!-- Adjusted margin-top -->
-          <div class="shape-circles position-absolute" style="top: 0; left: 0;">
-            <!-- Geometric shapes for a modern feel -->
-            <div class="circle-1" style="width: 150px; height: 150px; border-radius: 50%; background-color: rgba(0, 174, 255, 0.1); position: absolute; top: -30px; left: -30px;"></div>
-            <div class="circle-2" style="width: 100px; height: 100px; border-radius: 50%; background-color: rgba(0, 174, 255, 0.2); position: absolute; top: 100px; left: -50px;"></div>
+          <img src="images/me.jpg" class="img-fluid shadow-lg rounded-3" alt="My Portrait" style=" width: 100%; margin-top: 40px;"> 
+
+          <!-- Animated Background Shapes -->
+          <div class="shape-elements position-absolute">
+            <div class="shape-1" style="width: 120px; height: 120px; background: rgba(255, 255, 255, 0.05); position: absolute; top: -30px; left: -30px; transform: rotate(45deg);"></div>
+            <div class="shape-2" style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.1); position: absolute; top: 80px; left: -40px; transform: rotate(45deg);"></div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+
 
 <!-- About Section -->
 <section id="about" class="py-5" style="background: #f4f7fa;">
