@@ -28,7 +28,7 @@
 <body>
   <header>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark"> 
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #151515";>
             <a class="navbar-brand" href="#home">KERI</a>
             <button class="navbar-toggler" id="navbarToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span> <!-- Default burger icon -->
@@ -55,6 +55,7 @@
         </nav>
     </div>
 </header>
+
 
 
 
@@ -100,116 +101,102 @@
 </section>
 
 
-
 <!-- About Section -->
-<section id="about" class="py-5" style="background: #f4f7fa;">
+<section id="about" class="py-5" style="background: #121212; color: #ffffff;">
   <div class="container">
     <div class="row align-items-center">
-      <!-- About Me Text Block -->
-      <div class="col-lg-6 mb-4 order-lg-1 order-2">
-        <div class="p-4 text-start shadow rounded" style="background: #ffffff; border-left: 5px solid #ff5722;">
-          <h1 class="display-4 fw-bold mb-3" style="color: #333;">About me</h1>
-          <p class="text-muted mb-4" style="font-size: 1.15rem; line-height: 1.8;">
-                        Passionate about coding and web development, I am focused on mastering HTML, CSS, JavaScript, and other
-            technologies to create engaging and effective digital experiences. I am dedicated to learning and growing in the field,
-            and I am eager to collaborate on innovative projects.          
-            </p>
-          <div class="d-flex justify-content-between mt-4">
-            <a href="ΕΝΕΡΙΑΝΤΑ ΚΕΡΙ.pdf" class="btn btn-outline-primary btn-lg" target="_blank">View CV</a>
-          </div>
+      
+      <!-- Text Block -->
+      <div class="col-lg-6 col-12 order-2 order-lg-1">
+        <div class="p-4 shadow-lg rounded-4" style="background: #1e1e1e; border-left: 5px solid #ff9800;">
+          <h1 class="display-5 fw-bold mb-3" style="color: #ff9800;">About Me</h1>
+          <p class="mb-4" style="font-size: 1.15rem; line-height: 1.8;">
+            Passionate about coding and web development, I specialize in creating modern, engaging, and effective digital experiences. 
+            I am continuously learning and improving, with a focus on HTML, CSS, JavaScript, and modern frameworks.
+          </p>
+          <a href="ΕΝΕΡΙΑΝΤΑ ΚΕΡΙ.pdf" class="btn btn-outline-warning btn-lg rounded-3 px-4" target="_blank">View CV</a>
         </div>
       </div>
 
-
-      <!-- Decorative Coding Elements (now on the right) -->
-      <div class="col-lg-6 mb-4 order-lg-2 order-2 text-center">
-        <div class="d-flex justify-content-center flex-column align-items-center">
-          <div style="font-size: 40px; color: #ff5722;">&#123;</div>
-          <div style="background: #e0e0e0; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-            <code style="color: #333; font-family: 'Courier New', Courier, monospace;">
-              // Passionate about coding<br>
-              function buildFuture() {<br>
-              &nbsp;&nbsp;return "one line of code at a time";<br>
-              }
-            </code>
+      <!-- Animated Coding Block -->
+      <div class="col-lg-6 col-12 text-center order-1 order-lg-2">
+        <div class="d-flex flex-column align-items-center">
+          <div class="code-box p-4 rounded-4 shadow-lg" style="background: #1e1e1e; border: 1px solid rgba(255,255,255,0.1);">
+            <pre class="m-0 text-warning" style="font-family: 'Courier New', Courier, monospace; font-size: 1.2rem;">
+<span style="color: #ff9800;">// Passion for coding</span>
+function buildFuture() {
+   return "one line of code at a time";
+}
+            </pre>
           </div>
-          <div style="font-size: 40px; color: #ff5722;">&#125;</div>
+          <h2 class="mt-3 text-warning">“Creating the future, one line of code at a time.”</h2>
         </div>
-        <h2 class="mt-3 text-center" style="color: #191919;">“Creating the future, one line of code at a time.”</h2>
       </div>
+
     </div>
   </div>
 </section>
 
 
 <!-- Education & Training and Internship Experience Section -->
-<section id="education-internship" class="py-5" style="background: #eef2f7;">
-  <div class="container" style="background: #ffffff; border-radius: 10px; padding: 20px;">
-    <h2 class="display-4 text-center mb-5" style="color: #2c3e50;">Education & Training</h2>
+<section id="education-internship" class="py-5" style="background: #121212; color: #ffffff;">
+  <div class="container p-4 rounded-4" style="background: #1e1e1e;">
     
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-5 mb-4">
-        <div class="card shadow border-0" style="transition: transform 0.3s;">
-          <div class="card-body" style="background: #f8f9fa;">
-            <div class="d-flex align-items-center mb-3">
-              <div class="me-3">
-                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                  <i class="fas fa-university fa-lg"></i>
-                </div>
-              </div>
-              <h4 class="font-weight-bold text-info mb-0">University of The Aegean</h4>
-            </div>
-            <p class="text-muted">Βachelor's Degree in Cultural Technology and Communication (2020 - 2024) </p>
+    <!-- Education & Training -->
+    <h2 class="display-4 text-center mb-5 text-warning">Education & Training</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      
+      <!-- University -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0" style="background: #252525;">
+          <div class="card-body text-center">
+            <i class="fas fa-university fa-3x text-warning mb-3"></i>
+            <h4 class="text-warning">University of The Aegean</h4>
+            <p class="text-light">Bachelor's Degree in Cultural Technology and Communication</p>
+            <small class="text-muted">(2020 - 2024)</small>
           </div>
         </div>
       </div>
-      <div class="col-md-5 mb-4">
-        <div class="card shadow border-0" style="transition: transform 0.3s;">
-          <div class="card-body" style="background: #f8f9fa;">
-            <div class="d-flex align-items-center mb-3">
-              <div class="me-3">
-                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                  <i class="fas fa-school fa-lg"></i>
-                </div>
-              </div>
-              <h4 class="font-weight-bold text-success mb-0">Γενικό Λύκειο Γόννων</h4>
-            </div>
-            <p class="text-muted">Απολυτήριο (2017- 2020)</p>
+      
+      <!-- High School -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0" style="background: #252525;">
+          <div class="card-body text-center">
+            <i class="fas fa-school fa-3x text-success mb-3"></i>
+            <h4 class="text-success">Γενικό Λύκειο Γόννων</h4>
+            <p class="text-light">Απολυτήριο</p>
+            <small class="text-muted">(2017 - 2020)</small>
           </div>
         </div>
       </div>
     </div>
-<h2 class="display-4 mb-4 text-center" style="color: #2c3e50;">Internship Experience</h2>
-    <div class="accordion" id="internshipAccordion">
-      <div class="accordion-item border-0 rounded shadow-sm">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed border-0 rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <div class="container-fluid">
-              <div class="row w-100 d-flex align-items-center justify-content-between">
-                <div class="col-md-8">
-                  <h4 class="mb-0 text-primary">Frontend Developer Intern</h4>
-                  <h5 class="text-secondary">Aegean Solutions</h5>
-                </div>
-                <div class="col-md-4 text-md-end text-start">
-                  <small class="text-muted">July 1st 2024 - July 31st 2024</small>
-                </div>
+    
+    <!-- Internship Experience -->
+    <h2 class="display-4 text-center my-5 text-warning">Internship Experience</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: #252525;">
+          <div class="card-body p-4">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+              <div>
+                <h4 class="text-warning">Frontend Developer Intern</h4>
+                <h5 class="text-light">Aegean Solutions</h5>
+                <small class="text-muted">July 1st 2024 - July 31st 2024</small>
               </div>
+              <button class="btn btn-outline-warning mt-3 mt-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#internshipDetails">
+                View Details
+              </button>
             </div>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#internshipAccordion">
-          <div class="accordion-body p-4 bg-light">
-            <p>
-              During my internship as a Frontend Developer, I focused on creating engaging and responsive web pages. I honed my skills with modern CSS frameworks and JavaScript libraries, contributing to interactive elements and optimizing user experiences.
-            </p>
-            <div id="carouselExampleControls" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#modal1">
-                    <img src="project/project_page-0001.jpg" class="d-block w-100 rounded" alt="Project Image 1">
-                  </a>
+            <div id="internshipDetails" class="collapse mt-3">
+              <p class="text-light">During my internship as a Frontend Developer, I focused on creating engaging and responsive web pages. I honed my skills with modern CSS frameworks and JavaScript libraries, contributing to interactive elements and optimizing user experiences.</p>
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">
+                      <img src="project/project_page-0001.jpg" class="d-block w-100 rounded" alt="Project Image 1">
+                    </a>
+                  </div>
                 </div>
-                <!-- Add more carousel items here if needed -->
               </div>
             </div>
           </div>
@@ -235,10 +222,11 @@
 </div>
 
 
+
 <!-- Content for Projects -->
-<section id="projects" class="content-section py-5 bg-dark text-white">
+<section id="projects" class="content-section py-5 text-white" style="background-color: #121212;">
   <div class="container">
-    <h2 class="text-light mb-4 text-center">My Projects</h2>
+    <h2 class="display-4 text-center my-5 text-warning">My Projects </h2>
 
     <div class="row">
 
@@ -472,11 +460,11 @@
 
 
 <!-- Illustrator Projects -->
-<section id="projects" class="projects-section">
+<section id="projects" class="projects-section" style="background-color: #121212;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="section-heading">Illustrator Design Projects</h2>
-        <p class="section-subheading">A showcase of my work with Adobe Illustrator.</p>
+        <h2 class="display-4 text-center my-5 text-warning">Illustrator Design Projects</h2>
+      <p class="section-subheading text-light">A showcase of my work with Adobe Illustrator.</p>
       </div>
       <div class="project-grid">
         <!-- Project 1 -->
@@ -569,9 +557,9 @@
   </div>
   
 <!-- Content for Skills -->
-<section id="skills" class="content-section py-5 bg-light">
+<section id="skills" class="content-section py-5 " style="background-color: #121212;">
   <div class="container">
-      <h2 class="text-center text-dark mb-5">Skills</h2>
+    <h2 class="display-4 text-center my-5 text-warning"> Skills </h2>
       <div class="row">
           <!-- Skill 1: HTML, CSS & Bootstrap -->
           <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -697,9 +685,9 @@
 
 
   <!-- Contact Section -->
-<section id="contact" class="py-5 bg-dark text-white">
+  <section id="contact" class="py-5 text-white" style="background-color: #121212;">
   <div class="container">
-    <h2 class="text-center text-uppercase mb-5 font-weight-bold">Let's Connect</h2>
+    <h2 class="display-4 text-center my-5 text-warning"> Let's Connect </h2>
     <div class="row justify-content-center">
       <!-- Contact Card 1 (Email) -->
       <div class="col-lg-4 col-md-6 mb-4">
@@ -747,9 +735,8 @@
   </div>
 </section>
 
-
 <!-- Footer -->
-<footer class="footer text-white py-5">
+<footer class="footer text-white py-5" style="background-color:#151515;">
   <div class="container">
       <div class="row text-center text-md-start">
           <!-- Quick Links Section -->
@@ -763,7 +750,6 @@
                   <li><a href="#contact" class="footer-link">Contact</a></li>
               </ul>
           </div>
-
 
           <!-- Social Media Section -->
           <div class="col-12 col-md-4 text-center">
@@ -798,6 +784,7 @@
       </div>
   </div>
 </footer>
+
 
    <!-- Bootstrap JS Bundle -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
