@@ -19,60 +19,132 @@ header {
   background-size: cover;
 }
 
-.navbar-brand img {
-  max-height: 100px; /* Restrict logo height */
+/* Navbar Styling */
+.navbar {
+  background: rgba(21, 21, 21, 0.85); /* Dark transparent background */
+  backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Navbar brand */
 .navbar-brand {
-  color: #fbc531; /* bright yellow for the logo */
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  letter-spacing: 0.5px;
-  font-family: 'Poppins', sans-serif;
-  transition: color 0.3s; /* Smooth color transition */
+  color: #ff9800; /* Accent color */
+  transition: color 0.3s;
 }
 
-/* Navbar link styling */
+.navbar-brand:hover {
+  color: #fff;
+}
+
 .navbar-nav .nav-link {
-  color: #e0e0e0; /* Light gray for links */
   font-size: 1.1rem;
-  font-weight: 500;
-  margin-right: 1rem;
-  border-radius: 20px;
-  padding: 0.5rem 1rem; /* Added padding for better touch target */
-  transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+  color: #fff;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Hover and active state for links */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: #191919;/*light gray on hover */
-   background-color: #fbc531;/* bright yellow on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff9800;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
 }
 
-/* Toggler button for mobile view */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff9800;
+}
+
+/* Mobile Menu Button */
 .navbar-toggler {
   border: none;
+  outline: none;
+  padding: 5px 8px;
 }
 
+/* Toggler Icon */
+.navbar-toggler .navbar-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s;
+}
 
-/* Media query for small screen adjustments */
-@media (max-width: 992px) {
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* Open Menu Animation (When toggler is clicked) */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Mobile Menu Button Color */
+.navbar-toggler-icon, .navbar-toggler .navbar-toggler-icon::before, .navbar-toggler .navbar-toggler-icon::after {
+  background-color: #fff !important; /* Ensure all parts of the icon stay white */
+}
+
+/* Navbar Color when Active or Toggled */
+.navbar-nav .nav-item.active, .navbar-nav .nav-item:focus-within {
+  background-color: rgba(0, 0, 0, 0.1); /* Slight color when clicked */
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff9800; /* Active link color */
+}
+
+/* Responsive Navbar Dropdown */
+@media (max-width: 991px) {
   .navbar-nav {
-      /* background-color: #1b1b1c; Consistent background for mobile */
-      padding: 1rem;
+      text-align: center;
+      background: rgba(21, 21, 21, 0.95); /* Dark background for mobile */
+      padding: 15px;
       border-radius: 10px;
-      /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); Subtle shadow for mobile menu */
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
-
-  .navbar-nav .nav-item {
-      margin-bottom: 15px; /* Spacing between items */
-  }
-
   .navbar-nav .nav-link {
-      padding: 0.75rem 1rem; /* Maintain padding for touch targets */
-      text-align:center;
+      padding: 10px;
+      font-size: 1.2rem;
+      color: #fff; /* White text for dark background */
+  }
+  .navbar-nav .nav-link:hover {
+      color: #ff9800;
   }
 }
 
@@ -987,7 +1059,6 @@ body.scrolled #backToTopBtn {
 }
 
 
-
 /* Modern Button Styling */
 .btn-modern {
   background-color: #ffffff; /* Button background color */
@@ -1094,3 +1165,49 @@ body.scrolled #backToTopBtn {
             font-size: 35px;
             color: #fff;
         }
+
+        .quick-links li {
+          list-style: none;
+          margin-bottom: 8px;
+      }
+      
+      .quick-links a {
+          color: #ffcc00;
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-weight: 500;
+          display: inline-block;
+          position: relative;
+          transition: color 0.3s ease;
+          padding: 5px 0;
+      }
+      
+      /* Modern hover effect with underline animation */
+      .quick-links a::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 50%;
+          background-color: #ffa500;
+          transition: width 0.3s ease, left 0.3s ease;
+      }
+      
+      /* Expand the underline smoothly on hover */
+      .quick-links a:hover {
+          color: #ffa500;
+      }
+      
+      .quick-links a:hover::after {
+          width: 100%;
+          left: 0;
+      }
+      
+      /* Make sure it looks good on mobile */
+      @media (max-width: 768px) {
+          .quick-links a {
+              font-size: 1rem;
+          }
+      }
+      
