@@ -149,3 +149,52 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("theme", "dark");
   }
 });
+
+
+// 📌 Show/Hide Accessibility Menu
+document.getElementById("accessibility-btn").addEventListener("click", function () {
+  let menu = document.getElementById("accessibility-menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
+function closeAccessibilityMenu() {
+  document.getElementById("accessibility-menu").style.display = "none";
+}
+
+// 📌 Toggle Light/Dark Mode
+function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+
+// 📌 Font Size Adjustments
+function increaseFont() {
+  document.body.style.fontSize = "larger";
+}
+
+function decreaseFont() {
+  document.body.style.fontSize = "smaller";
+}
+
+function resetFont() {
+  document.body.style.fontSize = "";
+}
+
+// 📌 High Contrast Mode
+function toggleHighContrast() {
+  document.body.classList.toggle("high-contrast");
+}
+
+// 📌 Dyslexia-Friendly Font
+function toggleDyslexiaFont() {
+  document.body.classList.toggle("dyslexia-font");
+}
+
+// 📌 Reduce Animations
+function toggleReduceMotion() {
+  document.body.classList.toggle("reduce-motion");
+}
+
+// 📌 Underline Links
+function toggleUnderlineLinks() {
+  document.body.classList.toggle("underline-links");
+}
