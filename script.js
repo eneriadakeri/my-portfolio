@@ -100,3 +100,52 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const sections = document.querySelectorAll("section");
+
+  // Έλεγχος για αποθηκευμένο θέμα
+  const savedTheme = localStorage.getItem("theme");
+
+  // Αν δεν υπάρχει αποθηκευμένο θέμα, χρησιμοποιούμε dark mode
+  if (savedTheme === "light") {
+      applyLightMode();
+  } else {
+      applyDarkMode();
+  }
+
+  // Toggle event για το κουμπί
+  toggleButton.addEventListener("click", function () {
+      if (document.body.classList.contains("light-mode")) {
+          applyDarkMode();
+      } else {
+          applyLightMode();
+      }
+  });
+
+  function applyLightMode() {
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
+      themeIcon.classList.remove("fa-moon"); // Αφαιρούμε το φεγγάρι
+      themeIcon.classList.add("fa-sun"); // Προσθέτουμε τον ήλιο
+      sections.forEach(section => {
+          section.style.background = "#ffffff";
+          section.style.color = "#121212";
+      });
+      localStorage.setItem("theme", "light");
+  }
+
+  function applyDarkMode() {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
+      themeIcon.classList.remove("fa-sun"); // Αφαιρούμε τον ήλιο
+      themeIcon.classList.add("fa-moon"); // Προσθέτουμε το φεγγάρι
+      sections.forEach(section => {
+          section.style.background = "#121212";
+          section.style.color = "#ffffff";
+      });
+      localStorage.setItem("theme", "dark");
+  }
+});

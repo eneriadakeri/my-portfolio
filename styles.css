@@ -4,8 +4,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: scroll;
+  background: #121212;
+  color: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-
 
 /* Navbar container styling */
 header {
@@ -30,7 +32,7 @@ header {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff9800; /* Accent color */
+  color: #f7f7f7; /* Accent color */
   transition: color 0.3s;
 }
 
@@ -133,7 +135,7 @@ header {
 @media (max-width: 991px) {
   .navbar-nav {
       text-align: center;
-      background: rgba(21, 21, 21, 0.95); /* Dark background for mobile */
+      /* background: rgba(21, 21, 21, 0.95);  */
       padding: 15px;
       border-radius: 10px;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -147,7 +149,6 @@ header {
       color: #ff9800;
   }
 }
-
 
 .logo {
   font-size: 3rem;
@@ -322,6 +323,7 @@ header {
 
 .card-body {
   padding: 1rem;
+  /* background-color: #1e1e1e; */
 }
 
 .progress {
@@ -739,10 +741,6 @@ header {
   transform: scale(1.05); 
 }
 
-.card-body {
-  padding: 1.25rem; 
-  background-color: #282828; 
-}
 
 .card-title {
   color: #fec006;
@@ -1209,3 +1207,290 @@ header {
           }
       }
       
+/* Navbar για Light Mode */
+body.light-mode .navbar {
+  background: linear-gradient(90deg, #ff9800, #ffcc00); /* Μοντέρνο Gradient */
+  border-bottom: 2px solid #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Links στη Navbar */
+body.light-mode .navbar .nav-link {
+  color: #121212 !important;
+  font-weight: 500;
+  padding: 10px 15px; /* Καλύτερο spacing */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+body.light-mode .navbar .nav-link:hover {
+  color: #ffffff !important;
+  /* background: rgba(255, 255, 255, 0.2); */
+  border-radius: 5px;
+}
+
+/* Navbar Brand */
+body.light-mode .navbar-brand {
+  font-size: 1.5rem;
+  color: #121212 !important;
+}
+
+/* Responsive Navbar - Mobile */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar .nav-link {
+    padding: 12px 0;
+    display: block;
+  }
+}
+
+/* Hover Effect στα Links */
+body.light-mode .navbar .nav-link:hover {
+  color: #ffffff !important;
+  /* background: rgba(255, 255, 255, 0.2); */
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+/* Active Link */
+body.light-mode .navbar .nav-item.active .nav-link {
+  color: #ffffff !important;
+  font-weight: bold;
+  /* background: rgba(255, 255, 255, 0.3); */
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+/* Toggle Button */
+body.light-mode .navbar-toggler {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* Dropdown Menu */
+body.light-mode .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Links μέσα στο Dropdown */
+body.light-mode .dropdown-item {
+  color: #121212;
+  transition: background 0.3s ease-in-out;
+}
+
+body.light-mode .dropdown-item:hover {
+  background: #ffcc00;
+  color: #ffffff;
+}
+
+
+/* About Section για Light Mode */
+body.light-mode #about {
+  background: #ffffff;
+  color: #121212;
+}
+
+body.light-mode #about .shadow-lg {
+  background: #f8f9fa;
+  border-left: 5px solid #ff9800;
+}
+
+body.light-mode #about .code-box {
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #about .code-box pre {
+  color: #ff9800;
+}
+
+body.light-mode #about h2 {
+  color: #ff9800;
+}
+
+/* About Section για Dark Mode */
+body.dark-mode #about {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #about .shadow-lg {
+  background: #1e1e1e;
+  border-left: 5px solid #ff9800;
+}
+
+body.dark-mode #about .code-box {
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #about .code-box pre {
+  color: #ff9800;
+}
+
+body.dark-mode #about h2 {
+  color: #ff9800;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 767px) {
+  body.light-mode #about {
+      background: #f8f9fa;
+  }
+
+  body.dark-mode #about {
+      background: #333;
+  }
+
+  #about .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #about .col-lg-6 {
+      margin-bottom: 20px;
+  }
+
+  #about .code-box pre {
+      font-size: 1rem;
+  }
+
+  #about h2 {
+      font-size: 1.1rem;
+  }
+}
+
+/* Buttons για Light Mode */
+body.light-mode .btn-outline-light {
+  color: #121212;
+  border: 1px solid #121212;
+}
+
+body.light-mode .btn-outline-light:hover {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.light-mode .btn-warning {
+  background-color: #ffcc00;
+  color: #121212;
+}
+
+body.light-mode .btn-warning:hover {
+  background-color: #e6b800;
+}
+
+/* Buttons για Dark Mode */
+body.dark-mode .btn-outline-light {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+body.dark-mode .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.dark-mode .btn-warning {
+  background-color: #ffcc00;
+  color: #121212;
+}
+
+body.dark-mode .btn-warning:hover {
+  background-color: #e6b800;
+}
+
+/* Για Mobile (responsive) */
+@media (max-width: 767px) {
+  .btn {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+/* 🌞 Light Mode */
+body.light-mode .card {
+  background: #ffffff !important;
+  color: #121212 !important;
+}
+
+body.light-mode .card-body i {
+  color: #ff9800 !important;
+}
+
+body.light-mode .text-light {
+  color: #121212 !important;
+}
+
+body.light-mode small {
+  color: #121212 !important;
+}
+
+body.light-mode .btn-outline-warning {
+  border-color: #ff9800 !important;
+  color: #ff9800 !important;
+}
+
+body.light-mode .btn-outline-warning:hover {
+  background: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+
+/* 🛠 Responsive για κινητά */
+@media (max-width: 767px) {
+  .card-body h4 {
+      font-size: 1.2rem;
+  }
+
+  .card-body p, small {
+      font-size: 1rem;
+  }
+
+  .btn-outline-warning {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  #skills {
+      background-color: #ffffff;
+  }
+
+  .skill-card {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+  }
+
+  .skill-title {
+      color: #333;
+  }
+
+  .text-warning {
+      color: #ff9900 !important;
+  }
+
+  .badge-warning {
+      background-color: #ff9900;
+  }
+}
+
+body.light-mode .badge {
+  color:#1c1c1c;
+}
+
+body.dark-mode .card-body { 
+  background-color: #1e1e1e;
+}
+
