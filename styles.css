@@ -1747,3 +1747,8 @@ body.light-mode .btn-close {
     width: 230px;
   }
 }
+
+body.light-mode #contact h2,
+body.light-mode #contact p.lead {
+  color: #ff9800; /* ή #333 για πιο subtle */
+}
